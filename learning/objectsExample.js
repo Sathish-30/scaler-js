@@ -1,11 +1,23 @@
+// In Js Objects are in key value pairs
+
 const person = {
     name: {
-        firstName : "sathish",
-        secondName : "kumar",
+        firstName : "steve",
+        secondName : "rogers",
     },
-    age : 20,
+    age : 100,
     gender : "male",
-    address : "29 Anbu nagar 1st street edayarpalayam vadavalli road coimbatore",
+    city : "Brooklyn",
 }
 
-console.log(person.name.firstName);
+const captainAmerica = {
+    details : person,
+    superPower : "super soldier",
+    friends : ["bucky" , "tony stark" , "bruce banner"]
+}
+
+captainAmerica.movies = ["Age of ultron" , "civil war" , "First avenger","End game" , "infinity war"];
+
+delete captainAmerica.movies;
+
+console.log(captainAmerica);
