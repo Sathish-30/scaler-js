@@ -2,7 +2,7 @@
 // If the two values are the same, then return triple their sum
 
 const sumOfTwoNumbers = (a , b) => {
-    return (a === b) ? a * 3 : a + b;
+    return (a === b) ? (a + b) * 3 : a + b;
 }
 
 const num1 = 10;
