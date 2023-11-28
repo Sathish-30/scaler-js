@@ -19,4 +19,4 @@ const printWithSetTimeOut = (e : number) : Promise<void> => {
 
 
 const numAr : number[] = [1 , 2 , 3 , 4, 5 ,6];
-printAsync(numAr);
+printAsync(numAr).then(() => console.log("Returned"));

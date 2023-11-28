@@ -16,10 +16,13 @@ const printAsync = (arr) => __awaiter(void 0, void 0, void 0, function* () {
         yield printWithSetTimeOut(i);
     }
 });
-const printWithSetTimeOut = (e) => __awaiter(void 0, void 0, void 0, function* () {
-    yield setTimeout(() => {
-        console.log(`The number is ${e}`);
-    }, 1000);
-});
+const printWithSetTimeOut = (e) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log(`The number is ${e}`);
+            resolve();
+        }, 1000);
+    });
+};
 const numAr = [1, 2, 3, 4, 5, 6];
-printAsync(numAr);
+printAsync(numAr).then(r => console.log(r));
