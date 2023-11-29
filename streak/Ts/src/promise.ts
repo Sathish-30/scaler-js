@@ -1,7 +1,7 @@
 // How to produce a promise
 
-let promise : Promise<string> = new Promise((resolve , reject)  => {
-    const ab : number = 4;
+let promise : Promise<string> = new Promise((resolve , reject):void  => {
+    const ab : number = 5;
     const ac : number = 5;
     setTimeout(() => {
         if(ab === ac){
@@ -12,6 +12,7 @@ let promise : Promise<string> = new Promise((resolve , reject)  => {
     } , 1000);
 });
 
-promise.then((result : string) => {
-    console.log(result);
-}).catch((err) => console.log(`An error has been occurred`))
+// Fulfilled stage
+promise.then((res : string) : void => {
+    console.log("fulfilled stage")
+}).catch((err) => console.log("rejected stage"));

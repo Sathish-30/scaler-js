@@ -25,4 +25,4 @@ const printWithSetTimeOut = (e) => {
     });
 };
 const numAr = [1, 2, 3, 4, 5, 6];
-printAsync(numAr).then(r => console.log(r));
+printAsync(numAr).then(() => console.log("Returned"));

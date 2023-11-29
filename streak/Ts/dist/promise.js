@@ -1,7 +1,7 @@
 "use strict";
 // How to produce a promise
 let promise = new Promise((resolve, reject) => {
-    const ab = 4;
+    const ab = 5;
     const ac = 5;
     setTimeout(() => {
         if (ab === ac) {
@@ -12,6 +12,7 @@ let promise = new Promise((resolve, reject) => {
         }
     }, 1000);
 });
-promise.then((result) => {
-    console.log(result);
-}).catch((err) => console.log(`An error has been occurred`));
+// Fulfilled stage
+promise.then((res) => {
+    console.log("fulfilled stage");
+}).catch((err) => console.log("rejected stage"));
