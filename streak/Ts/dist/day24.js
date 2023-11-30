@@ -1,4 +1,6 @@
 "use strict";
+// Implement a debounce function that takes a function and a delay as arguments.
+// The returned function should ensure that the original function is not called more than once in the specified delay.
 const debounce = (func, time) => {
     let timer;
     return () => {
